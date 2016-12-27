@@ -17,6 +17,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: ubuntu
   #username: postgres #default if not created
   #password: root     #default if not created
   pool: 5
@@ -81,5 +82,4 @@ test:
 production:
   <<: *default
   database: dstress_production
-  username: dstress
   password: <%= ENV['DSTRESS_DATABASE_PASSWORD'] %>
